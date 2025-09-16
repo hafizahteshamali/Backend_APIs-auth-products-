@@ -1,5 +1,5 @@
 import multer from "multer";
-import productStorage from "../cloudinary/ProductCloudinaryConfig.js";
+import productStorage from "../middlewares/ProductCloudinaryConfig.js";
 
 const productUpload = multer({storage: productStorage});
 

@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import appRoutes from "./Routes/AuthRoutes.js";
 import DbConnection from "./Database/DbConnection.js";
 import productRoutes from "./Routes/ProductRoutes.js";
+import cartRoutes from "./Routes/CartRoutes.js";
 
 const app = express();
 dotenv.config();
@@ -19,6 +20,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/auth", appRoutes);
 app.use("/api/products", productRoutes);
+app.use("/api/cart", cartRoutes);
 
 DbConnection()
 
